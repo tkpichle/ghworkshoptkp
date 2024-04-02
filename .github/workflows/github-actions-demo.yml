@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 
 on: 
   push:
-    branchs: [ main ]
+    branches: [ main ]
     paths-ignore: [.github/**]
   pull_request:
     branches: [ main ]
@@ -16,7 +16,7 @@ job:
     steps:
       - run: |
           echo "The job was triggered by event ${{ github.event_name }}"
-          echo "The name of the branch is ${{ github.ref }}"
+          echo "The git ref is ${{ github.ref }}"
       
       - uses: actions/checkout@v3.3.0
 
